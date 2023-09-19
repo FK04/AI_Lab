@@ -38,13 +38,13 @@ while ((ai!=af or bi!=bf)):
 			bi=bi-(a-ai)
 			ai=a
 	elif(op==7):
-		if(ai>a):
+		if(ai<a):
 			ai=ai+bi
 			bi=0
 		else:
 			print(" Jug Overflow")
 	elif(op==8):
-		if(bi>b):
+		if(bi<b):
 			bi=bi+ai
 			ai=0
 		else:
