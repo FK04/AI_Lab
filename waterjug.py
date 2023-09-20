@@ -1,20 +1,26 @@
-a=int(input("Enter Jug A Capacity: "))
-b=int(input("Enter Jug B Capacity: "))
-ai=int(input("Initially Water in Jug A: "))
-bi=int(input("Initially Water in Jug B: "))
-af=int(input("Final State of Jug A: "))
-bf=int(input("Final State of Jug B: "))
-print("List Of Operations You can Do:\n")
-print("1.Fill Jug A Completely\n")
-print("2.Fill Jug B Completely\n")
-print("3.Empty Jug A Completely\n")
-print("4.Empty Jug B Completely\n")
-print("5.Pour From Jug A till Jug B filled Completely or A becomes empty\n")
-print("6.Pour From Jug B till Jug A filled Completely or B becomes empty\n")
-print("7.Pour all From Jug B to Jug A\n")
-print("8.Pour all From Jug A to Jug B\n")
-while ((ai!=af or bi!=bf)):
-	op=int(input("Enter the Operation: "))
+a=int(input("Enter Capacity of Jug A : "))
+b=int(input("Enter Capacity of Jug B : "))
+ai=int(input("Enter Initial Capacity of Jug A : "))
+bi=int(input("Enter Initial Capacity of Jug B : "))
+af=int(input("Enter Final Capacity of Jug A : "))
+bf=int(input("Enter Final Capacity of Jug B : "))
+
+if((af>a) or (bf>b) or ( (((a+b)%2)!=((af+bf)%2)) and ( (af!=a)and(bf!=b)) ) ):
+	print("No Solution Possible !")
+	exit(1)
+
+print("List OF Operations you can do :\n")
+print("1.Fill Jug A Completely")
+print("2.Fill Jug B Completely")
+print("3.Empty Jug A Completely")
+print("4.Empty Jug B Completely")
+print("5.Pour from Jug A till Jug B is filled completely or A becomes empty")
+print("6.Pour from Jug B till Jug A is filled completely or B becomes empty")
+print("7.Pour all from Jug A to Jug B")
+print("8.Pour all from Jug B to Jug A")
+
+while((ai!=af or bi!=bf)):
+	op=int(input("Enter The Operation: "))
 	if(op==1):
 		ai=a
 	elif(op==2):
@@ -34,19 +40,20 @@ while ((ai!=af or bi!=bf)):
 		if(a-ai>bi):
 			ai=ai+bi
 			bi=0
+			
 		else:
 			bi=bi-(a-ai)
 			ai=a
 	elif(op==7):
 		if(ai<a):
+			bi=ai+bi
+			ai=0
+		else:
+			print("Overflow , select another option")
+	elif(op==8):
+		if(bi<b):
 			ai=ai+bi
 			bi=0
 		else:
-			print(" Jug Overflow")
-	elif(op==8):
-		if(bi<b):
-			bi=bi+ai
-			ai=0
-		else:
-			print(" Jug Overflow")
+			print("Overflow , select another option")
 	print(ai,bi)
