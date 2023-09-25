@@ -49,6 +49,7 @@ def wjug(a,b,ai,bi,af,bf):
                 bi -= pour
             else:
                 print("Jug A overflow, can't proceed")
+                exit(1)
         elif op == 8:
             if bi < b and ai > 0:
                 pour = min(b - bi, ai)
@@ -56,6 +57,7 @@ def wjug(a,b,ai,bi,af,bf):
                 ai -= pour
             else:
                 print("Jug B overflow, can't proceed")
+                exit(1)
         print(f"Jug A: {ai}, Jug B: {bi}")
 
     print("Final State Reached: Jug A =", ai, ", Jug B =", bi)

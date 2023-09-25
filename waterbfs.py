@@ -1,3 +1,4 @@
+
 from collections import deque
 def BFS(a, b, target):
  
@@ -62,3 +63,4 @@ def BFS(a, b, target):
     if not isSolvable:
         print('no solution')
 BFS(4,3,2)
+
