@@ -1,4 +1,4 @@
-
+#bfs water jug
 from collections import deque
 def BFS(a, b, target):
  
