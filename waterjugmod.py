@@ -1,3 +1,4 @@
+#waterjug with method
 import math
 
 a = int(input("Enter Jug A Capacity: "))
