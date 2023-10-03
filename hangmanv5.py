@@ -29,12 +29,12 @@ while "_" in display:
             
 		
 		if lives==0:
-            
-			print("You loose")
-            
-			exit(1)
+            		print("Guess word is ",wordChoosen)
+            		print(stages[lives])
+            		print("You Have lost!")
+            		exit(1)
+			
 	print(f"{' '.join(display)}")
-	print(stages[lives])
 		
 else:
 	print("You have won")
