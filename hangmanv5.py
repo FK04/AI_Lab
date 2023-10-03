@@ -29,9 +29,9 @@ while "_" in display:
             
 		
 		if lives==0:
-            		print("Guess word is ",chosen_word)
             		print(stages[lives])
-            		print("You Have lost!")
+			print("Guess word is ",chosen_word)
+            		print("You Have lost!")			
             		exit(1)
 			
 	print(f"{' '.join(display)}")
