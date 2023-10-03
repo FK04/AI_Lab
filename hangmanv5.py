@@ -30,10 +30,9 @@ while "_" in display:
 			if lives > 0:	
 				lives=lives-1
 				if lives==0:
-					print("You loose")
 					print(stages[lives])
 					print(f'the solution is {chosen_word}.')
-								
+					print("You loose")
 					exit(1)
 		print(f"{' '.join(display)}")
 		print(lives)
