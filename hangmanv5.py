@@ -35,6 +35,6 @@ while "_" in display:
             		exit(1)
 			
 	print(f"{' '.join(display)}")
-		
+	print(stages[lives])		
 else:
 	print("You have won")
