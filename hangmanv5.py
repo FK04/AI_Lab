@@ -5,7 +5,7 @@ from hangman_art import stages,logo
 chosen_word=random.choice(word_list)
 lives=6
 #testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# print(f'Pssst, the solution is {chosen_word}.')
 print(logo)
 display=[]
 
@@ -29,7 +29,7 @@ while "_" in display:
             
 		
 		if lives==0:
-            		print("Guess word is ",wordChoosen)
+            		print("Guess word is ",chosen_word)
             		print(stages[lives])
             		print("You Have lost!")
             		exit(1)
